@@ -53,7 +53,7 @@ This project delivers a fully automated Azure data pipeline that:
 ---
 ### 🏗️ Solution Architecture (Explained)
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/project_architeture.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/project_architeture.png">
 
 ## 1. Data Sources
 - ECDC COVID-19 API → Daily case & death data (https://www.ecdc.europa.eu/en/covid-19)
@@ -169,7 +169,7 @@ We used various components of ADF Pipeline activities to ingest the data from bo
 Ingest "population by age" data for all EU Countries into the Data Lake to support the machine learning models with the data to predict an increase in Covid-19 mortality rate.
 
 ### Solution Flow
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_activity.jpeg">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_activity.jpeg">
 
 ### Steps:
 1. Create a Linked Service To Azure Blob Storage
@@ -184,7 +184,7 @@ Ingest "population by age" data for all EU Countries into the Data Lake to suppo
 
 
 ### Pipeline Design :
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/pipeline_diagram.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/pipeline_diagram.png">
 
 ### ECDC Data from Web to Destination Data Lake
 
@@ -196,7 +196,7 @@ Ingest "population by age" data for all EU Countries into the Data Lake to suppo
 
 
 ### Solution Flow
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/solution_flow.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/solution_flow.png">
 
 Steps:
 1. Create a Linked Service using an HTTP connector
@@ -207,11 +207,11 @@ Steps:
 6. Lookup to get all the parameters from json file, then pass it to ForEach ECDC DATA as shown below
 7. Schedule Trigger
 8. 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/look_up.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/look_up.png">
 
 ### Pipeline Design :
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/pipeline_design.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/pipeline_design.png">
 
 # 2. DATA TRANSFORMATION
 
@@ -229,7 +229,7 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 # Data Flows (1) Cases & Deaths Data:
 
 ### Solution Flow
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/transform_cases_death_data.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/transform_cases_death_data.png">
 
 ### Steps:
 1. Cases And Deaths Source (Azure Data Lake Storage Gen2 )
@@ -242,13 +242,13 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 8. Used Schedule Trigger
 
 pipeline_design
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/solution_flow1.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/solution_flow1.png">
 
 
 # Data Flows (2) Hospital Admissions Data:
 
 ### Solution Flow
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/hospital_admin.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/hospital_admin.png">
 
 ### Steps:
 1. Hospital Admissions Source (Azure Data Lake Storage Gen2 )
@@ -272,22 +272,22 @@ pipeline_design
 - Create a sink dataset (Azure Data Lake Storage Gen2)
 - Used Schedule Trigger
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/trigger.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/trigger.png">
 
 
 # Databricks Activity (3) -- Population File:
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/databricks_activity.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/databricks_activity.png">
 
 # 3. Copy Data to Azure SQL
 1- Copy Cases and Deaths
 2- Copy hospital admissions data
 3- Copy testing data
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_data_to_SQL.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_data_to_SQL.png">
 
 
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_data_to_SQL2.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/copy_data_to_SQL2.png">
 
 # 4. Reporting via Power BI
 
@@ -298,16 +298,16 @@ pipeline_design
 5. Publish to web
 
 ### Covid-19 Trend in the EU/EEA & UK 2020 by Cases, Deaths, Hospital Occupancy, and ICU Occupancy
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/EU-EEA  UK 2020 by Cases.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/EU-EEA  UK 2020 by Cases.png">
 
 
 ### Covid-19 Cases and Death breakdown by population in the UK, France, and Germany
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/Covid-19 Cases.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/Covid-19 Cases.png">
 
 
 
 ### Total Number of covid tests carried out vs Confirmed Cases
-<img src = "https://github.com/macmichael-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/no_of_test.png">
+<img src = "https://github.com/nelson-analytics/COVID-19-Data-Engineering-Analytics-Pipeline/blob/main/project-snapshots/no_of_test.png">
 
 
 ### Used Technologies
@@ -317,6 +317,7 @@ pipeline_design
 - Azure Storage Account
 - Azure Data Lake Gen2
 - Azure SQL Database
+
 
 
 
